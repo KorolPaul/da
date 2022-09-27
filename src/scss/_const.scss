@@ -1,0 +1,34 @@
+$img: "src/img";
+
+$bg_color: #F5F5F5;
+
+$color: #000;
+$cGreen: #5A9D91;
+$cRed: #C92F1A;
+$cGray: #717171;
+$cPink: #F4A3DD;
+$cOrange: #FCAC5D;
+$cGrey: #E9E9E9;
+$cGreyLight: rgba(56, 45, 77, .3);
+$cBlue: #7360E6;
+$cBlueLight: #8EA2EC;
+$cYellow: #FFD369;
+$cPurple: #C859FF;
+$cPurpleDark: #781AA8;
+$cPurpleLight: #9778DD;
+
+$font-family: 'TT Norms Pro', monospace;
+$font-family__heading: 'Lora', serif;
+
+$font-size: 24px;
+$font-size__small: 16px;
+
+$max-width: 1296px;
+$indent: 16px;
+
+// easings
+$easingSmooth: cubic-bezier(0.38, 0.005, 0.215, 1);
+$easeOutCirc: cubic-bezier(.07, .82, .17, 1);
+$easeInOutCirc: cubic-bezier(.78, .13, .15, .86);
+$easeInCirc: cubic-bezier(.6, .04, .98, .34);
+$easing: $easingSmooth;
