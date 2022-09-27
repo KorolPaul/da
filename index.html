@@ -17,7 +17,8 @@
 </head>
 <body>
     <header class="header">
-        <a href="/" class="logo">
+        <div class="header_holder">
+            <a href="/" class="logo">
             <img src="src/img/logo.svg" alt="">
         </a>
         <button class="menu-toggle">
@@ -37,8 +38,8 @@
                         Наши выставки
                     </a>
                 </li>
-                <li class="menu_list-item">
-                    <span class="menu_link">
+                <li class="menu_list-item menu_list-item__parent">
+                    <span class="menu_link menu_link__arrow">
                         Проекты «Да»
                     </span>
                     <ul class="menu_sublist">
@@ -61,6 +62,7 @@
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
 
     <main>
@@ -68,8 +70,8 @@
             <div class="section_holder">
                 <div class="showcase">
                      <picture class="showcase_image">
-                        <source media="(max-width: 768px)" srcset="src/img/main-mobile.jpg">
-                        <source media="(min-width: 768px)" srcset="src/img/main.jpg">
+                         <source media="(min-width: 768px)" srcset="src/img/main.jpg">
+                         <source media="(min-width: 0)" srcset="src/img/main-mobile.jpg 100w">
                         <img src="src/img/main.jpg" alt="" >
                     </picture>
                     <div class="showcase_content">
@@ -77,7 +79,10 @@
                         <div class="showcase_text">
                             <p>Временные выставки, которые можно посетить, не выходя из дома.</p>
                         </div>
-                    </div> 
+                    </div>
+                    <div class="showcase_caption">
+                        <p>Фотографии: Depositphotos Фотографии: DepositphotosФотографии: Depositphotos</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -100,6 +105,7 @@
                     <div class="gallery_columns">
                         <span class="gallery_date">Сентябрь - Ноябрь 2022</span>
                         <div class="gallery_text">
+                            <button class="gallery_text-button">Описание</button>
                             <p>Из-за военной агрессии Российской Федерации против Украины Одесский художественный музей вынужден был закрыть постоянную экспозицию. Пока богатейшая коллекция, насчитывающая более 10 000 произведений искусства, недоступна ни исследователям, ни посетителям, представляем небольшую подборку работ художников-евреев из собрания музея.</p>
                         </div>
                     </div>
@@ -107,6 +113,9 @@
                         <div id="gallery">
                             <img src="src/img/gallery.png" alt="">
                         </div>
+                    </div>
+                    <div class="gallery_caption">
+                        <p>Фотографии: Depositphotos Фотографии: DepositphotosФотографии: Depositphotos</p>
                     </div>
                 </div>
             </div>
@@ -118,27 +127,27 @@
                 <div class="carousel">
                     <div class="carousel_item">
                         <img class="carousel_image" src="src/img/slider/slider-1.jpg" alt="">
-                        <span class="carousel_title">Lorem Ipsum is simply dummy text of the </span>
+                        <h3 class="carousel_title">Lorem Ipsum is simply dummy text of the </h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="carousel_item">
                         <img class="carousel_image" src="src/img/slider/slider-2.jpg" alt="">
-                        <span class="carousel_title">Lorem Ipsum is simply dummy text of the </span>
+                        <h3 class="carousel_title">Lorem Ipsum is simply dummy text of the </h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="carousel_item">
                         <img class="carousel_image" src="src/img/slider/slider-3.jpg" alt="">
-                        <span class="carousel_title">Lorem Ipsum is simply dummy text of the </span>
+                        <h3 class="carousel_title">Lorem Ipsum is simply dummy text of the </h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="carousel_item">
                         <img class="carousel_image" src="src/img/slider/slider-4.jpg" alt="">
-                        <span class="carousel_title">Lorem Ipsum is simply dummy text of the </span>
+                        <h3 class="carousel_title">Lorem Ipsum is simply dummy text of the </h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="carousel_item">
                         <img class="carousel_image" src="src/img/slider/slider-5.jpg" alt="">
-                        <span class="carousel_title">Lorem Ipsum is simply dummy text of the </span>
+                        <h3 class="carousel_title">Lorem Ipsum is simply dummy text of the </h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                     </div>
                     <div class="carousel_item">
@@ -161,7 +170,7 @@
             </div>
             <div class="footer_menu">
                 <div class="footer_menu-row">
-                    <a href="#" class="footer_link">О проекте</a>
+                    <a href="#" class="footer_link footer_link__desktop">О проекте</a>
                     <a href="mailto:info@dadada.live" class="footer_link">info@dadada.live</a>
                 </div>
                 <div class="footer_menu-row">
@@ -171,6 +180,11 @@
                     <a href="#" class="footer_link">Youtube</a>
                     <a href="#" class="footer_link">Twitter</a>
                 </div>
+            </div>
+            <div class="footer_copyrights">
+                <span>© SLON Media. Все права защищены.</span>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Правила пользования сайтом</a>
             </div>
         </div>
     </footer>

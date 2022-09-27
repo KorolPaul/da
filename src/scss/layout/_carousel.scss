@@ -2,36 +2,25 @@
     margin-left: -$indent;
     margin-right: -$indent;
 
-    &_row {
-        display: flex;
-        gap: 18px;
-        margin: 0 0 12px;
-        transition: .3s linear transform;
-        overflow-x: auto;
-        @include tablet {
-            overflow-x: inherit;
-            margin-bottom: 25px;
-            gap: 36px;
-            margin-left: -20%;
-            @include desktop {
-                margin-left: -50vw;
-            }
-        }
-
-        &:nth-child(even) {
-            @include tablet {
-                margin-left: -100%;
-            }
-            
-        }
-    }
     &_item {
         flex-shrink: 0;
+
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            color: $cOrange;
+            @include tablet {
+                font-size: 18px;
+            }
+        }
     }
     &_image {
-        height: 148px;
+        width: 100%;
+        display: block;
+        margin: 0 0 22px;
         @include tablet {
-            height: 295px;
+            margin-bottom: 32px;
         }
     }
 }
