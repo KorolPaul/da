@@ -47,17 +47,34 @@
         }
     }
     &_sublist {
-        background-color: #FBF9F5;
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        pointer-events: none;
+        display: none;
+        @include tablet {
+            display: block;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            pointer-events: none;
+            padding: 10px 16px;
+            background-color: $bg_color;
+            transition: .2s $easing opacity;
+        }
 
-        .menu_list-item.opened  & {
-            opacity: 1;
-            pointer-events: all;
+        .menu_list-item.opened & {
+            display: block;
+            @include tablet {
+                
+                
+                border-radius: 10px;
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+        .menu_list-item__parent:hover & {
+            @include tablet {
+                opacity: 1;
+                pointer-events: all;
+            }
         }
     }
     &_list-item,
@@ -68,6 +85,20 @@
         @include tablet {
             margin: 0;
         }
+    }
+    &_list-item.opened {
+        background-color: #FBF9F5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        @include tablet {
+            position: relative;
+            background-color: transparent;
+        }
+    }
+    &_sublist-item {
+        text-align: right
     }
     &_link {
         color: $color;
@@ -80,6 +111,9 @@
         }
 
         &__arrow {
+            @include tablet {
+                color: $cOrange;
+            }
 
             &::after {
                 content: '';
@@ -88,10 +122,25 @@
                 width: 10px;
                 height: 6px;
                 vertical-align: middle;
+                @include tablet {
+                    background: url(#{$img}/up-orange.svg) no-repeat center / 100%;
+                    transform: rotate(180deg);
+                }
             }
 
+            .menu_list-item.opened & {
+                color: $cOrange;
+            }
             .menu_list-item.opened &::after {
-                transform: rotate(180deg);
+                background: url(#{$img}/up-orange.svg) no-repeat center / 100%;
+                @include tablet {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .menu_sublist-item & {
+            @include tablet {
+                font-size: 15px;
             }
         }
     }

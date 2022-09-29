@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'TT Norms Pro';
     src: local('TT Norms Pro Regular'), local('TT-Norms-Pro-Regular'),
-        url('TTNormsPro-Regular.woff2') format('woff2'),
-        url('TTNormsPro-Regular.woff') format('woff');
+        url('/src/fonts/TTNormsPro-Regular.woff2') format('woff2'),
+        url('/src/fonts/TTNormsPro-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }

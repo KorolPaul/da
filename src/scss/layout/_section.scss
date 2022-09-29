@@ -1,4 +1,10 @@
 .section {
+    position: relative;
+
+    &__overflow {
+        overflow: hidden;
+    }
+
     &_holder {
         @include layout;
     }

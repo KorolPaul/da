@@ -4,7 +4,7 @@ const isMobile = window.innerWidth <= 768
 const isDesktop = window.innerWidth >= 1000
 
 // sliders
-const carousel = document.querySelectorAll('.carousel');
+const carousel = document.querySelectorAll('.carousel_items');
 carousel.forEach(el => {
     tns({
         container: el,
@@ -14,13 +14,15 @@ carousel.forEach(el => {
         autoplay: false,
         nav: true,
         navPosition: 'bottom',
-        controls: true,
+        controls: false,
         loop: false,
         responsive: {
             768: {
+                nav: false,
                 items: 3,
                 gutter: 25,
                 autoWidth: true,
+                controls: true,
             }
         }
     });
